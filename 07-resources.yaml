@@ -4,13 +4,13 @@ metadata:
   name: resources-demo
 spec:
   containers:
-    - name: nginx
-      image: nginx
+  - name: nginx
+    image: nginx
   resources:
     request:
-     cpu: "60Mi" 
+     cpu: "60m" 
      memory: "100Mi" 
     
     limits:
-     cpu: "100Mi"
+     cpu: "100m"
      memory: "120Mi"
