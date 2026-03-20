@@ -6,10 +6,10 @@ spec:
   containers:
   - name: nginx
     image: nginx
-  resources:
-    request:
-     cpu: "60m" 
-     memory: "100Mi" 
+    resources:
+      requests:
+      cpu: "60m" 
+      memory: "100Mi" 
     
     limits:
      cpu: "100m"
