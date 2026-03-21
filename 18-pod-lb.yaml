@@ -6,7 +6,7 @@ metadata:
    project: roboshop
    component: frontend
    environment: dev
-   purpose: node-port
+   purpose: load-balancer
 
 spec:
   containers:
