@@ -3,11 +3,11 @@ kind: Pod
 metadata:
     name: nginx
 spec:    
-  selector:
-    project: roboshop
-    component: frontend
-    environment: dev
+    selector:
+      project: roboshop
+      component: frontend
+      environment: dev
 ports:
-  protocol: TCP
-  port: 80 ## service port
-  targetPort: 80 ## container port
+    - protocol: TCP
+      port: 80 ## service port
+      targetPort: 80 ## container port
