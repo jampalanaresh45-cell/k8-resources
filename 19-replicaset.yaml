@@ -11,7 +11,7 @@ spec:
   replicas: 3
   selector:
   ######### These are used to select pods ##############
-    matchLables:
+    matchLabels:
       purpose: rs-demo
       project: roboshop
 ### pod definition ########
