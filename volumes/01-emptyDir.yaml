@@ -11,7 +11,8 @@ spec:
       name: nginx-logs
       
   - name: almalinux
-    image: almalinux
+    image: almalinux:9
+    command: ["sh", "-c", "while true; do echo Hello Kubernetes! && sleep 3600; done"]
     volumeMounts:
      - mountPath: /mnt/nginx-logsD
        name: nginx-logs
