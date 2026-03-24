@@ -1,0 +1,16 @@
+### creating pv is k8 administrator task, it is not a developer task, so we will not create pv using yaml file, but we will create pv using aws cli command, and then we will create pvc using yaml file, and then we will use that pvc in our deployment yaml file.
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ebs-static
+spec:
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain ##retain means that even if the pvc is deleted, the pv will not be deleted, it will be retained, and it can be reused by another pvc, but recycle means that even if the pvc is deleted, the pv will be deleted, and it cannot be reused by another pvc..recycle means delethe pv when the pvc is deleted, and retain means keep the pv even if the pvc is deleted, and it can be reused by another pvc.
+  capacity:
+    storage: 15Gi
+  csi:
+    driver: ebs.csi.aws.com
+    fsType: ext4
+    volumeHandle: vol-00c6fb8e9ed8bbe60
+  

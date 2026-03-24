@@ -35,6 +35,8 @@ spec:
         volumeMounts:
         - name: varlog
           mountPath: /var/log
+          readOnly: true
+      # if your cluster has a large number of nodes, you may want to increase the termination
       # it may be desirable to set a high priority class to ensure that a DaemonSet Pod
       # preempts running Pods
       # priorityClassName: important
