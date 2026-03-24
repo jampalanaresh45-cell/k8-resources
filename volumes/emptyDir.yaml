@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: empty-dir-demo
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: /var/log/nginx
+      name: nginx-logs
+      
+  - name: almalinux
+    image: almalinux
+    volumeMounts:
+     - mountPath: /mnt/nginx-logsD
+       name: nginx-logs
+       readOnly: true
+  volumes:
+  - name: nginx-logs
+    emptyDir:
+      sizeLimit: 100Mi   
