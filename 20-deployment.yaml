@@ -4,7 +4,7 @@ metadata:
   name: nginx
   ########### Replica set labels ###############
   labels: 
-    purpose: dp-demo
+    purpose: headless-svc-demo
     project: roboshop
   
 spec:
